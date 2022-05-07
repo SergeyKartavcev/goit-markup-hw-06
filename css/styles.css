@@ -46,6 +46,15 @@ margin: 0;
 padding: 0;
 }
 
+
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* шапка*/
 
 .head{
@@ -829,7 +838,7 @@ padding-right: 24px;
     background-color: var(--primary-bg-color);
 }
    
-   .centr-icon{
+.centr-icon{
        fill: #FFFFFF;
        width: 20px;
        height: 20px;
@@ -837,26 +846,80 @@ padding-right: 24px;
        margin-left: 12px;
        margin-top: 12px;
     }
-   
 
-.container{
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    /* form mail  */
+.form-footer{
+    margin-left: 93px;
+}
+.form-tit{
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+margin-bottom: 20px;
 }
 
-textarea{
-    resize: none;
-    width: 448px;
-    height: 120px;
-    margin-left: 40px;
+.chapter-form{
+    display: flex;
 }
+
+
+.mail-form label{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+left: 18px;
+}
+
+.mail-form input{
+width: 358px;
+height: 50px;
+background-color: var(--hero-bg-color);
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+color: var(--primary-text-color);
+}
+
+/* кнопка */
+
+.send-button{
+width: 200px;
+height: 50px;
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+margin-left: 30px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.87;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: var(--primary-text-color);
+padding-left: 29px;
+}
+.send-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 13.8px;
+    margin-left: 10px;
+}
+
+
+
+/* форма модальное окно */
 
 .form{
   outline: 1px solid var(--primary-bg-color);
 }
+
 .title-form{
 font-style: normal;
 font-weight: 700;
@@ -887,26 +950,53 @@ letter-spacing: 0.01em;
 color: var(--acent-text-color);
 }
 
+.form-input{
+    width: 448px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px; 
 
-
-
-
-.options input[type="checkbox"]{
-    width: 16px;
-    height: 15px;
-    margin-top: 25px;
-    margin-left: 52px;
 }
 
-.title-chek{
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.7;
-letter-spacing: 0.03em;
-color: var(--acent-text-color);
+.form-input:focus + .form-icon  {
+    color: #2196F3;
+   
 }
 
+.form-input:focus{
+    outline: 1px solid var(--primary-bg-color);
+}
+
+.form-icon {
+width: 13px;
+height: 13px;
+top: 33px;
+left: 60px;
+position: absolute;
+fill: var(--title-text-color);
+fill: currentColor;
+    }
+.form-icon-chek{
+position: absolute;
+bottom: -12px;
+left: 52px;
+fill: var(--acent-text-color);
+fill: currentColor;
+    }
+
+
+textarea{
+    resize: none;
+    width: 448px;
+    height: 120px;
+    margin-left: 40px;
+}
 .comment-text{
     padding: 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -937,22 +1027,20 @@ color: var(--primary-text-color);
 cursor: pointer;
 }
 
-.form-icon {
-width: 13px;
-height: 13px;
-top: 33px;
-left: 60px;
-position: absolute;
-fill: var(--title-text-color);
-fill: currentColor;
+.options input[type="checkbox"]{
+    width: 16px;
+    height: 15px;
+    margin-top: 25px;
+    margin-left: 52px;
 }
 
-.form-icon-chek{
-    position: absolute;
-    bottom: -12px;
-    left: 52px;
-    fill: var(--acent-text-color);
-    fill: currentColor;
+.title-chek{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.7;
+letter-spacing: 0.03em;
+color: var(--acent-text-color);
 }
 
 /* .check{
@@ -965,25 +1053,3 @@ border: 0.2px solid #FFFFFF;
     color: var(--primary-bg-color);
 }
 
-.form-input{
-    width: 448px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    padding-left: 42px;
-    cursor: pointer;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px; 
-
-}
-
-.form-input:focus + .form-icon  {
-    color: #2196F3;
-   
-}
-
-.form-input:focus{
-    outline: 1px solid var(--primary-bg-color);
-}
