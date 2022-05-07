@@ -868,28 +868,18 @@ color: var(--title-text-color);
 padding-top:  40px; 
 padding-bottom: 12px;
 }
+
 .form-fild{
 display: flex;
 flex-direction: column;
 position: relative;
-
 }
 
-.form-fild input{
-    width: 448px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-}
 
 .form-fild label{
-    margin-left:  40px;
-    margin-bottom: 4px;
-    font-style: normal;
+margin-left:  40px;
+margin-bottom: 4px;
+font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 14px;
@@ -917,8 +907,15 @@ letter-spacing: 0.03em;
 color: var(--acent-text-color);
 }
 
-.comment{
+.comment-text{
     padding: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px; 
+}
+
+.comment-text:focus{
+    outline: 1px solid var(--primary-bg-color);
 }
 
 .form-button{
@@ -940,33 +937,53 @@ color: var(--primary-text-color);
 cursor: pointer;
 }
 
-.form-icon{
-position: absolute;
+.form-icon {
+width: 13px;
+height: 13px;
 top: 33px;
-left: 55px;
-fill: #212121;
+left: 60px;
+position: absolute;
+fill: var(--title-text-color);
 fill: currentColor;
-} 
+}
 
 .form-icon-chek{
     position: absolute;
     bottom: -12px;
     left: 52px;
+    fill: var(--acent-text-color);
+    fill: currentColor;
 }
+
+/* .check{
+    background: #FFFFFF;
+border: 0.2px solid #FFFFFF;
+} */
+
 
 .title-chek-part{
     color: var(--primary-bg-color);
 }
 
 .form-input{
-    padding-left: 35px;
-    color: var(--acent-text-color);
-    fill: currentColor;
+    width: 448px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-left: 42px;
     cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px; 
+
 }
 
-.form-input:focus + .form-icon {
+.form-input:focus + .form-icon  {
     color: #2196F3;
-    
-    /* outline: 1px solid var(--primary-bg-color); */
+   
+}
+
+.form-input:focus{
+    outline: 1px solid var(--primary-bg-color);
 }
