@@ -737,6 +737,7 @@ padding-right: 24px;
    
    
    .location{
+       display: block;
        font-size: 14px;
        line-height: 1.7;
        letter-spacing: 0.03em;
@@ -849,8 +850,9 @@ padding-right: 24px;
 
     /* form mail  */
 .form-footer{
-    margin-left: 93px;
+margin-left: 93px;
 }
+
 .form-tit{
 font-style: normal;
 font-weight: 700;
@@ -872,10 +874,18 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
-left: 18px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form input{
+padding: 15px 16px;
 width: 358px;
 height: 50px;
 background-color: var(--hero-bg-color);
@@ -888,7 +898,7 @@ color: var(--primary-text-color);
 /* кнопка */
 
 .send-button{
-width: 200px;
+/* width: 200px; */
 height: 50px;
 background: #2196F3;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -982,13 +992,8 @@ position: absolute;
 fill: var(--title-text-color);
 fill: currentColor;
     }
-.form-icon-chek{
-position: absolute;
-bottom: -12px;
-left: 52px;
-fill: var(--acent-text-color);
-fill: currentColor;
-    }
+
+
 
 
 textarea{
@@ -1026,13 +1031,39 @@ letter-spacing: 0.06em;
 color: var(--primary-text-color);
 cursor: pointer;
 }
-
+/* checkbox */
 .options input[type="checkbox"]{
     width: 16px;
     height: 15px;
     margin-top: 25px;
     margin-left: 52px;
 }
+
+.checkbox{
+    appearance: none;
+} 
+
+.form-icon-chek{
+position: absolute;
+display: inline-block;
+width: 16px;
+height: 15px;
+background: #FFFFFF;
+border: 2px solid var(--title-text-color);
+border-radius: 4px;
+bottom: 123px;
+left: 52px;
+}
+
+.checkbox:checked+.form-icon-chek{
+background-color: #2196F3;
+background-image: url(../images/iconcheck.svg);
+background-size: contain;
+background-origin: border-box;
+border: #2196F3;
+}
+
+
 
 .title-chek{
 font-style: normal;
@@ -1043,10 +1074,6 @@ letter-spacing: 0.03em;
 color: var(--acent-text-color);
 }
 
-/* .check{
-    background: #FFFFFF;
-border: 0.2px solid #FFFFFF;
-} */
 
 
 .title-chek-part{
