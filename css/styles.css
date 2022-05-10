@@ -969,9 +969,16 @@ color: var(--acent-text-color);
     padding-left: 42px;
 }
 
-.form-input:focus + .form-icon  {
+.form-input:focus + .form-icon1 {
     color: #2196F3;
-   
+}
+
+.form-input:focus + .form-icon2 {
+    color: #2196F3;
+}
+
+.form-input:focus + .form-icon3 {
+    color: #2196F3;
 }
 
 .form-input:focus{
