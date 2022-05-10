@@ -279,65 +279,6 @@ color: var(--primary-bg-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ; 
-  }
-
-  .backdrop.is-hidden {  
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .backdrop.is-hidden.modal{
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-
- .modal{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 528px;
-    height: 581px;
-    background-color: var(--primary-text-color);
-    border-radius: 4px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translate(-50%, -50%) scale(1);
-} 
-
-.close-button { 
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-text-color);
-    border-radius: 50%;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
-
-  .modal-icon {
-      position: absolute;
-    fill:  #000000;
-    fill: currentColor;
-    align-items: center;
-    cursor: pointer;
-  }
-  .modal-icon:hover{
-      fill: var(--primary-bg-color);
-  }
-
 /* преимущества*/
 .pictures{
 width: 270px;
@@ -578,7 +519,7 @@ margin-left: 30px;
     overflow: hidden; 
 }
 
-.product:hover .produkt-overlay{
+.bloc:hover .produkt-overlay{
     transform: translateY(-100%);
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -590,7 +531,7 @@ margin-left: 30px;
     background-color: var(--primary-bg-color);
     position: absolute;
     opacity: 0; 
-    
+
 }
 
 
@@ -605,6 +546,8 @@ padding-top: 63px;
 padding-bottom: 63px;
 padding-left: 24px;
 padding-right: 24px;
+
+
 }
 
 .flax-container{
@@ -660,7 +603,6 @@ padding-right: 24px;
     padding: 20px 24px 20px 24px;
     border: 1px solid #EEEEEE; 
 }
-
 /* filter */
 .filters{
     padding-bottom: 0;
@@ -828,6 +770,7 @@ padding-right: 24px;
        display: block;
        border-radius: 50%;
        padding: 0; 
+       background: rgba(255, 255, 255, 0.1);
        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 .icon:hover{
@@ -850,7 +793,7 @@ padding-right: 24px;
 
     /* form mail  */
 .form-footer{
-margin-left: 93px;
+margin-left: auto;
 }
 
 .form-tit{
@@ -890,7 +833,6 @@ width: 358px;
 height: 50px;
 background-color: var(--hero-bg-color);
 border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 color: var(--primary-text-color);
 }
@@ -898,12 +840,11 @@ color: var(--primary-text-color);
 /* кнопка */
 
 .send-button{
-/* width: 200px; */
 height: 50px;
 background: #2196F3;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
-margin-left: 30px;
+margin-left: 12px;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -926,9 +867,66 @@ padding-left: 29px;
 
 /* форма модальное окно */
 
-.form{
-  outline: 1px solid var(--primary-bg-color);
-}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ; 
+  }
+
+  .backdrop.is-hidden {  
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .backdrop.is-hidden.modal{
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+ .modal{
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    background-color: var(--primary-text-color);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1);
+} 
+
+.close-button { 
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-text-color);
+    border-radius: 50%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
+  .modal-icon {
+    position: absolute;
+    fill:  #000000;
+    fill: currentColor;
+    align-items: center;
+    cursor: pointer;
+  }
+  .modal-icon:hover{
+      fill: var(--primary-bg-color);
+  }
+
 
 .title-form{
 font-style: normal;
@@ -938,7 +936,6 @@ line-height: 1.15;
 text-align: center;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
-padding-top:  40px; 
 padding-bottom: 12px;
 }
 
@@ -950,7 +947,6 @@ position: relative;
 
 
 .form-fild label{
-margin-left:  40px;
 margin-bottom: 4px;
 font-style: normal;
 font-weight: 400;
@@ -966,12 +962,11 @@ color: var(--acent-text-color);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    padding-left: 42px;
     cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px; 
-
+    padding-left: 42px;
 }
 
 .form-input:focus + .form-icon  {
@@ -983,27 +978,45 @@ color: var(--acent-text-color);
     outline: 1px solid var(--primary-bg-color);
 }
 
-.form-icon {
-width: 13px;
-height: 13px;
+.form-icon1 {
+width: 12px;
+height: 12px;
 top: 33px;
-left: 60px;
+left: 15px;
 position: absolute;
 fill: var(--title-text-color);
 fill: currentColor;
+}
+
+.form-icon2 {
+    width: 13px;
+    height: 13px;
+    top: 33px;
+    left: 15px;
+    position: absolute;
+    fill: var(--title-text-color);
+    fill: currentColor;
     }
-
-
-
+    
+.form-icon3 {
+width: 15px;
+height: 13px;
+top: 33px;
+left: 15px;
+position: absolute;
+fill: var(--title-text-color);
+fill: currentColor;
+ }
+        
 
 textarea{
     resize: none;
     width: 448px;
     height: 120px;
-    margin-left: 40px;
 }
 .comment-text{
-    padding: 12px;
+    padding-top: 12px;
+    padding-left: 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px; 
@@ -1014,12 +1027,13 @@ textarea{
 }
 
 .form-button{
-width: 200px;
 height: 50px;
 background-color: var(--primary-bg-color);
 margin-bottom: 40px;
-margin-left: 164px;
+margin-left: 124px;
 margin-top: 30px;
+padding-left: 55px;
+padding-right: 55px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 font-style: normal;
@@ -1036,7 +1050,7 @@ cursor: pointer;
     width: 16px;
     height: 15px;
     margin-top: 25px;
-    margin-left: 52px;
+    margin-right: 10px;
 }
 
 .checkbox{
@@ -1058,7 +1072,9 @@ left: 52px;
 .checkbox:checked+.form-icon-chek{
 background-color: #2196F3;
 background-image: url(../images/iconcheck.svg);
-background-size: contain;
+width: 16px;
+height: 15px;
+background-size: cover;
 background-origin: border-box;
 border: #2196F3;
 }
