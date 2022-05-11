@@ -986,9 +986,9 @@ color: var(--acent-text-color);
 }
 
 .form-icon1 {
-width: 12px;
-height: 12px;
-top: 33px;
+width: 18px;
+height: 18px;
+top: 31px;
 left: 15px;
 position: absolute;
 fill: var(--title-text-color);
@@ -996,9 +996,9 @@ fill: currentColor;
 }
 
 .form-icon2 {
-    width: 13px;
-    height: 13px;
-    top: 33px;
+    width: 18px;
+    height: 18px;
+    top: 31px;
     left: 15px;
     position: absolute;
     fill: var(--title-text-color);
@@ -1006,9 +1006,9 @@ fill: currentColor;
     }
     
 .form-icon3 {
-width: 15px;
-height: 13px;
-top: 33px;
+width: 18px;
+height: 18px;
+top: 31px;
 left: 15px;
 position: absolute;
 fill: var(--title-text-color);
@@ -1053,30 +1053,31 @@ color: var(--primary-text-color);
 cursor: pointer;
 }
 /* checkbox */
-.options input[type="checkbox"]{
+.option input[type="checkbox"]{
     width: 16px;
     height: 15px;
     margin-top: 25px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
-.checkbox{
+.check__input{
     appearance: none;
 } 
 
-.form-icon-chek{
+.check__box{
 position: absolute;
 display: inline-block;
 width: 16px;
 height: 15px;
+overflow: hidden;
 background: #FFFFFF;
 border: 2px solid var(--title-text-color);
 border-radius: 4px;
-bottom: 123px;
-left: 52px;
+bottom: 122px;
+left: 40px;
 }
 
-.checkbox:checked+.form-icon-chek{
+.check__input:checked+.check__box{
 background-color: #2196F3;
 background-image: url(../images/iconcheck.svg);
 width: 16px;
@@ -1088,7 +1089,7 @@ border: #2196F3;
 
 
 
-.title-chek{
+.chek__title{
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
